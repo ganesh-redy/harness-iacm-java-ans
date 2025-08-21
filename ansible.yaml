@@ -34,6 +34,7 @@
         enabled: true
     - name: run the container
       shell: |
+        docker rm -f $(docker ps -a)
         docker run -d -p 8085:8085 {{ image_name }}  
 
 
