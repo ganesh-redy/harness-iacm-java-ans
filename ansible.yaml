@@ -32,9 +32,11 @@
         name: docker
         state: started
         enabled: true
+    - name: Stop and remove existing container on port 8085
+      shell: |
+        docker ps -aq --filter "publish=8085" | xargs -r docker rm -f
     - name: run the container
       shell: |
-        docker rm -f $(docker ps -a)
         docker run -d -p 8085:8085 {{ image_name }}  
 
 
