@@ -1,3 +1,3 @@
-project = "sam-453310"
+project = "ganesh-project-469710"
 
 image = "centos-stream-9"
